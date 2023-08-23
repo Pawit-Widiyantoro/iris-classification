@@ -14,13 +14,12 @@ df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 # Create new column for the target
 df['species'] = iris.target
 
-X = df.drop('species', axis=1)
-y = df['species']
-
 # Create an instance of the IrisClassifier
 classifier = IrisClassifier()
 
 # Load your data (X, y)
+X = df.drop('species', axis=1)
+y = df['species']
 
 # Fit the model
 classifier.fit(X, y)
